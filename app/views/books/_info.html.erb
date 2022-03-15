@@ -1,7 +1,7 @@
 
    <div class="col-md-3">
 
-   <%= form_for(book) do |f| %>
+   <%= form_with model: @book do |f| %>
    <div>
      <h1>User info</h1>
    <%= image_tag user.get_profile_image(63,63) %>
@@ -20,8 +20,7 @@
   </table>
 
 <div class="row">
-<%= link_to edit_user_path(user), class:"btn btn-default btn-block fas fa-user-cog" do %>
-   <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+<%= link_to edit_user_path(user), class:"btn btn-outline-secondary btn-block fas fa-user-cog" do %>
 <% end %>
 </div>
 
